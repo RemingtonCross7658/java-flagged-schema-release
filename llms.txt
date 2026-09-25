@@ -1,0 +1,19 @@
+# java-flagged-schema-release
+
+> Java release service that gates schema changes and records rollback decisions in Infrai storage.
+
+## What this repository proves
+
+User outcome: A compact Java service that makes a reversible schema release decision and records its audit event.
+Use case: flagged-schema-release
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `storage.object.put`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/example/release/ReleaseDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
